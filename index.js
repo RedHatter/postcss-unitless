@@ -1,6 +1,6 @@
 let postcss = require('postcss')
 
-const remRegex = /([0-9.]+)rem\b/
+const remRegex = /([0-9.]+)rem\b/g
 function replace(value, rootValue, precision) {
   return value.replace(
     remRegex,
@@ -10,7 +10,7 @@ function replace(value, rootValue, precision) {
   )
 }
 
-module.exports = postcss.plugin('postcss-unitless', opts => {
+module.exports = postcss.plugin('postcss-unitless', (opts = {}) => {
   const { rootValue = 18, precision = 2 } = opts
 
   return (root, result) => {
