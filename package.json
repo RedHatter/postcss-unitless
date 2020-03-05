@@ -1,0 +1,24 @@
+{
+  "name": "postcss-unitless",
+  "version": "0.0.1",
+  "description": "PostCSS plugin to convert rem units to, scaled, unitless values",
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin"
+  ],
+  "scripts": {
+    "test": "tape index.test.js",
+    "format": "prettier --single-quote --no-semi --write *.js"
+  },
+  "author": "Timothy Johnson <timothy@idioticdev.com>",
+  "license": "MIT",
+  "repository": "RedHatter/postcss-unitless",
+  "dependencies": {
+    "postcss": "^7.0.18"
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1",
+    "tape-async": "^2.3.0"
+  }
+}
